@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0px;
+  font-family: sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
-  flex-direction: column;
+}
+.chatUi {
+  width: 35%;
+  height: 100vh;
+  background: rgb(224, 231, 234) ;
+}
+
+.chatbot {
+  width: 325px;
+  border: 8px solid black;
+  border-top: 40px solid black;
+  border-bottom: 40px solid black;
+  border-radius: 20px;
+  height: 600px;
+  margin: 50px auto;
+}
+
+.topNav {
+  color: white;
+  background-color: #1768d0;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 0px 16px;
+  width: 100%;
+  /* position: fixed; */
+}
+.topNav img {
+  height: 70px;
+  margin-right: 5px;
+}
+.topNav > div {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title {
+  margin: 5px 0px;
+}
+.caption {
+  margin: 0px;
+  font-size: 13px;
+}
+.clearIcon {
+  cursor: pointer;
+}
+.clearIcon:hover {
+  color:rgb(224, 231, 234);
+}
+
+/* chat text css */
+.chatbot__chat {
+  margin: 20px 0px;
+}
+.chat {
+  margin: 0px 16px;
+  width: 70%;
+  font-size: 13px;
+}
+.sent {
+  float: right;
+}
+.message {
+  background-color: white;
+  padding: 16px;
+  margin: 5px 0px;
+}
+.received > .message {
+  border-radius: 0% 15px 15px 15px;
+}
+.sent > .message {
+  border-radius: 15px 0px 15px 15px;
+  background-color: #1768d0;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.time {
+  margin: 0px 5px;
+  color: grey;
+  font-size: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sent > .time {
+  float: right;
 }
